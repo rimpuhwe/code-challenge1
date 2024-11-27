@@ -57,6 +57,7 @@ header svg:hover{
 /* main section styling  */
 
 main{
+    border:1px solid red;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -119,7 +120,7 @@ main{
 }
 .personal-name button{
     width:30%;
-    padding:20px 30px 10px;
+    padding:20px;
     border: 1px solid transparent;
     font-size:18px;
     font-weight: 600;
@@ -137,6 +138,7 @@ main{
     border-top: unset;
 }
 #recent-posts #post-holder{
+    border:1px solid green;
     width:60%;
     padding:20px;
     display: flex;
@@ -234,12 +236,18 @@ footer #scroll-up{
     fill:var(--secondary-color);
     font-weight: bold;
 }
-footer #scroll-up:hover{
+#scroll-up:hover{
     background: var(--terrtiary-color);
     border:1px solid transparent;
+}
+#scroll-up:hover span{
     color:var(--primary-color);
 }
-footer span , footer a{
+#scroll-up:hover svg{
+    fill:var(--primary-color);
+}
+.footer-link,a{
     color:var(--secondary-color);
 }
+
 
