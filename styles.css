@@ -211,5 +211,35 @@ main{
     color:var(--primary-color);
     border:1px solid transparent;
 }
-
+/* footer part */
+footer{
+    width:100%;
+    background: var(--footer-color);
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+    gap:20px;
+}
+footer #scroll-up{
+    border:1px solid black;
+    background: var(--primary-color);
+    color:var(--secondary-color);
+    width:fit-content;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scroll-up svg{
+    fill:var(--secondary-color);
+    font-weight: bold;
+}
+footer #scroll-up:hover{
+    background: var(--terrtiary-color);
+    border:1px solid transparent;
+    color:var(--primary-color);
+}
+footer span , footer a{
+    color:var(--secondary-color);
+}
 
