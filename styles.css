@@ -97,12 +97,13 @@ main{
     background-size: cover;
     padding:20px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content:flex-start;
+    align-items:end;
 }
-.personal-name{
-    width:50%;
-    margin-top:13.8rem;
+#personal-pic .personal-name{
+    width:50% !important;
+    margin-bottom:5rem; 
+    border: 1px solid red;   
 }
 .personal-name h3{
     text-transform: capitalize;
@@ -434,7 +435,8 @@ button[type="button"]:hover{
       padding: 40px;
     }
     #personal-pic .personal-name{
-        margin-top:0;
+        margin-bottom:15rem;
+        width:55% !important;
     }
     #personal-pic button{
         display: inline-block;
@@ -488,7 +490,7 @@ button[type="button"]:hover{
       flex-direction: row;
     }
     #personal-pic .personal-name{
-        margin-top:0;
+        margin-bottom:19rem;
     }
     #personal-pic button{
         display: inline-block;
