@@ -102,8 +102,7 @@ main{
 }
 #personal-pic .personal-name{
     width:50% !important;
-    margin-bottom:5rem; 
-    border: 1px solid red;   
+    margin-bottom:5rem;   
 }
 .personal-name h3{
     text-transform: capitalize;
@@ -357,19 +356,18 @@ aside .aside-cards{
     background: var(--secondary-color);
 }
 #tags .tag-block{
-    padding:5px;
+    padding:10px;
 }
 #tags-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
-    row-gap: 10px;
+    gap:15px 2px;
 }
 #tags-container div{
     width:fit-content;
     background: #efefef;
     padding:2px 5px;
-    margin:10px 2px;
     cursor:text;
 }
 #tags-container div:first-child{
@@ -416,12 +414,12 @@ button[type="button"]:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    row-gap:15px;   
+    gap:10px;   
 }
 #gallery img{
-    width:45%;
+    width:50%;
     height: auto;
 }
 /* responsive designs for different screen size  */
@@ -435,7 +433,7 @@ button[type="button"]:hover{
       padding: 40px;
     }
     #personal-pic .personal-name{
-        margin-bottom:15rem;
+        margin-bottom:13rem;
         width:55% !important;
     }
     #personal-pic button{
@@ -480,7 +478,12 @@ button[type="button"]:hover{
   
     #gallery img {
       width: 48%;
-      margin-bottom: 10px;
+    }
+    input{
+        margin-bottom: 10px !important;
+    }
+    label{
+        width:50%;
     }
   }
   
@@ -488,9 +491,6 @@ button[type="button"]:hover{
   @media (min-width: 1024px) and (max-width: 1440px) {
     main {
       flex-direction: row;
-    }
-    #personal-pic .personal-name{
-        margin-bottom:19rem;
     }
     #personal-pic button{
         display: inline-block;
@@ -507,9 +507,6 @@ button[type="button"]:hover{
     }
     #gallery img {
       width: 40%;
-    }
-    #tags-container{
-        padding:10px;
     }
     input{
         margin-top: 10px;
