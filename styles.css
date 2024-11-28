@@ -91,30 +91,34 @@ main{
     height:auto;
 }
 #personal-pic{
-    width:100%;
-    position:relative;
+    height:100vh;
+    background-image: url('./assets/jane.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-#personal-pic .personal-name{
-    width:40%;
-    position: absolute;
-    bottom:19rem;
-    left:1rem;
+.personal-name{
+    width:50%;
+    margin-top:13.8rem;
 }
 .personal-name h3{
     text-transform: capitalize;
     letter-spacing: 2px;
-    font-size: 2rem; 
+    font-size: 1.5rem; 
     margin-bottom: 10px; 
     color:var(--secondary-color) 
 }
 .personal-name h3 span{
     text-transform: uppercase;
     font-weight:bold;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .personal-name button{
     width:30%;
-    padding:20px;
+    padding:15px;
     border: 1px solid transparent;
     font-size:18px;
     font-weight: 600;
@@ -352,9 +356,6 @@ aside .aside-cards{
     background: var(--secondary-color);
 }
 #tags .tag-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding:5px;
 }
 #tags-container {
@@ -423,7 +424,96 @@ button[type="button"]:hover{
     height: auto;
 }
 /* responsive designs for different screen size  */
+  /* Extra Small Devices (Phones, 480px and below) */
+   @media (max-width: 480px) {
 
+   }
+  /* Medium Devices (Tablets, 768px - 1203px) */
+  @media screen and (min-width: 768px) and (max-width: 1203px) {
+    #hero-section .intro-container {
+      padding: 40px;
+    }
+    #personal-pic .personal-name{
+        margin-top:0;
+    }
+    #personal-pic button{
+        display: inline-block;
+        text-align: center;
+        width:40%;
+    }
+  
+    #recent-posts {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #recent-posts #post-holder {
+      width: 80%;
+      padding: 15px;
+    }
+  
+    aside {
+      width: 80%;
+      padding:0;
+      margin: 20px auto;
+    }
+    aside .related-content-holder{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        gap:30px;
+    }
+    aside .aside-cards{
+        width:100%;
+    }
+    #tags-container {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        row-gap: 10px;
+    }
+  
+    #gallery img {
+      width: 48%;
+      margin-bottom: 10px;
+    }
+  }
+  
+ /* Large Devices (Desktops, 1024px and up) */
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    main {
+      flex-direction: row;
+    }
+    #personal-pic .personal-name{
+        margin-top:0;
+    }
+    #personal-pic button{
+        display: inline-block;
+        text-align: center;
+        width:40%;
+    }
+  
+    #recent-posts {
+      flex-direction: row;
+    }
+  
+    aside {
+      width: 40%;
+    }
+    #gallery img {
+      width: 40%;
+    }
+    #tags-container{
+        padding:10px;
+    }
+    input{
+        margin-top: 10px;
+    }
+  }
+  
 
 
 
