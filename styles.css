@@ -217,7 +217,7 @@ hr{
     border:1px solid transparent;
 }
 #buttons-container .reply{
-    width:20%;
+    width:fit-content;
     border:1px solid var(--primary-color);
     display: flex;
     justify-content: center;
@@ -406,7 +406,7 @@ button[type="button"]:hover{
 }
 #gallery{
     width:100%;
-    padding:15px 0;
+    padding:10px 0;
     background: var(--secondary-color);
 }
 #gallery .image-holder{
@@ -423,12 +423,160 @@ button[type="button"]:hover{
     height: auto;
 }
 /* responsive designs for different screen size  */
-  /* Extra Small Devices (Phones, 480px and below) */
-   @media (max-width: 480px) {
+/* smaller devices like mobile phones  */
+@media screen and (max-width: 480px){
+    #hero-section .intro-container{
+        padding:60px 10px;
+    }
+    #personal-pic{
+        background-size:contain;
+        height:auto;
+    }
+    #personal-pic .personal-name{
+        margin-bottom:8rem;
+        margin-top: 3rem;
+        width:90% !important;
+        line-height: 35px;
 
-   }
-  /* Medium Devices (Tablets, 768px - 1203px) */
-  @media screen and (min-width: 768px) and (max-width: 1203px) {
+    }
+    .personal-name h3{
+        font-size: 0.8rem;
+    }
+    .personal-name h3 span{
+        font-size: 1.4rem;
+    }
+    #personal-pic button{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width:45%;
+    }   
+    #post-holder .post-cards{
+        width:100%;
+    }
+    .post-cards:first-child #author{
+        flex-direction: column;
+        gap:10px;
+    }
+    #recent-posts {
+        flex-direction: column;
+        align-items:start;
+    }
+    #recent-posts #post-holder {
+        width:95%;
+        padding:0;
+        margin:15px 0 0 8px;
+    }
+    
+    aside {
+        width: 80%;
+        padding:0;
+        margin: 20px auto;
+    }
+    aside .related-content-holder{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        gap:30px;
+    }
+    aside .aside-cards{
+        width:100%;
+    }
+    #categories-container .category{
+        padding:50px;
+    }
+    #tags-container {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        row-gap: 10px;
+    }
+    
+    #gallery img {
+        width: 45%;
+    }
+    input{
+        margin-bottom: 10px !important;
+    }
+    label{
+        width:100%;
+    }
+    
+}
+/* Extra Small Devices (Phones, 767px and below) */
+ @media (min-width: 481px) and (max-width: 767px) {
+    #personal-pic .personal-name{
+        margin-bottom:13.8rem;
+        width:80% !important;
+        line-height: 35px;
+    }
+    #personal-pic button{
+        display: inline-block;
+        text-align: center;
+        width:40%;
+    }
+    
+    #post-holder .post-cards{
+        width:100%;
+    }
+    .post-cards:first-child #author{
+        flex-direction: column;
+        gap:10px;
+    }
+   
+
+    #recent-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #recent-posts #post-holder {
+        width:95%;
+        padding:0;
+        margin:15px 0 0 10px;
+    }
+    
+    aside {
+        width: 80%;
+        padding:0;
+        margin: 20px auto;
+    }
+    aside .related-content-holder{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        gap:30px;
+    }
+    aside .aside-cards{
+        width:100%;
+    }
+    #tags-container {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        row-gap: 10px;
+    }
+    
+    #gallery img {
+        width: 46%;
+    }
+    input{
+        margin-bottom: 10px !important;
+    }
+    label{
+        width:50%;
+    }
+
+}
+/* Medium Devices (Tablets, 768px - 1203px) */
+@media screen and (min-width: 768px) and (max-width: 1203px) {
     #hero-section .intro-container {
       padding: 40px;
     }
@@ -448,8 +596,9 @@ button[type="button"]:hover{
     }
   
     #recent-posts #post-holder {
-      width: 80%;
-      padding: 15px;
+      width: 90%;
+      padding: 0;
+      margin:20px 0 0 10px;
     }
   
     aside {
@@ -485,10 +634,10 @@ button[type="button"]:hover{
     label{
         width:50%;
     }
-  }
+}
   
- /* Large Devices (Desktops, 1024px and up) */
-  @media (min-width: 1024px) and (max-width: 1440px) {
+/* Large Devices (Desktops, 1024px and up) */
+ @media (min-width: 1024px){
     main {
       flex-direction: row;
     }
@@ -501,17 +650,13 @@ button[type="button"]:hover{
     #recent-posts {
       flex-direction: row;
     }
-  
-    aside {
-      width: 40%;
-    }
     #gallery img {
-      width: 40%;
+      width: 45%;
     }
     input{
         margin-top: 10px;
     }
-  }
+}
   
 
 
